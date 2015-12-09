@@ -1,0 +1,16 @@
+[
+  {
+    "name" : "File",
+    "items" : [
+      { "name" : "Open File", "handler" : "OpenFileHandler"}
+
+    ]
+  },
+  {
+    "name" : "Help",
+    "items" : [
+      { "name" : "About"}
+
+    ]
+  }
+]
