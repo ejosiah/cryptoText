@@ -2,6 +2,7 @@ package com.josiahebhomenye.cryptoText;
 
 import com.josiahebhomenye.cryptoText.view.GUI;
 
+import javax.swing.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -10,7 +11,16 @@ import java.util.concurrent.Executors;
  */
 public class Main {
 
+	static void createAndInitializeUI(){
+		try {
+			new GUI().init();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 	public static void main(String[] args) throws Exception{
-		new GUI().init();
+		SwingUtilities.invokeLater(Main::createAndInitializeUI);
+
 	}
 }

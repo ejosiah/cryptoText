@@ -2,7 +2,16 @@
   {
     "name" : "File",
     "items" : [
-      { "name" : "Open File", "handler" : "OpenFileHandler"}
+      { "name" : "Open...", "handler" : "OpenFileHandler"},
+      {
+        "name" : "Save"
+      },
+      {
+        "name" : "Save As..."
+      },
+      {
+        "name": "Exit"
+      }
 
     ]
   },

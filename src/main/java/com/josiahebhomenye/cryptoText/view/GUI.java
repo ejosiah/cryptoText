@@ -32,8 +32,8 @@ public class GUI extends JFrame{
 
 	public void construct() throws Exception{
 		menuLoader = new MenuLoader(this);
-		JMenuBar menuBar = menuLoader.load("/Users/jay/projects/cryptoText/src/main/resources/menus.json");
-		add(menuBar, BorderLayout.NORTH);
+		JMenuBar menuBar = menuLoader.load("D:\\Users\\Josiah\\IdeaProjects\\cryptoText\\src\\main\\resources\\menus.json");
+		setJMenuBar(menuBar);
 		workspcae = new JTextArea();
 		add(new JScrollPane(workspcae), BorderLayout.CENTER);
 		add(new Label("Status Bar"), BorderLayout.SOUTH);
@@ -55,5 +55,9 @@ public class GUI extends JFrame{
 
 	public void runInBackground(Runnable runnable){
 		BACKGROUND_SERVICE.execute(runnable);
+	}
+
+	public void invokeLater(Runnable runnable){
+		SwingUtilities.invokeLater(runnable);
 	}
 }
